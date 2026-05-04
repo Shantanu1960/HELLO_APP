@@ -5,10 +5,11 @@ public class HelloApp {
             names.append("World");
         } else {
             for (String name : args) {
-                if (names.length() > 0) {
-                    names.append(", ");
-                }
                 names.append(name);
+                names.append(", ");
+            }
+            if (names.length() > 0) {
+                names = new StringBuilder(names.substring(0, names.length() - 2));
             }
         }
         System.out.println("Hello, " + names + "!");
